@@ -1,0 +1,15 @@
+cd personlib
+ant clear
+ant dist
+cp dist/persons.jar ../webapp/lib
+cd ../servicelib
+ant clear
+ant dist
+cp dist/services.jar ../webapp/lib
+cd ../webapp
+ant clear
+ant deploy
+cp hbernatexml/* build/WEB-INF/classes/
+cp hbernatexml/hibernate.cfg.xml build/WEB-INF/
+cp hbernatexml/hibernate.cfg.xml build/WEB-INF/classes/WebApp/
+ant deploy

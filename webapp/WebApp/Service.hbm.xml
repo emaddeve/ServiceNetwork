@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="services">
+
+    <class name="Service" table="services">
+        <id name="id" column="id">
+            <generator class="increment"/>
+       </id>
+        <property name="name" column="name" type="string" />
+        <property name="des" column="des" type="string" />
+        <property name="type" column="type" type="int" />
+        <property name="pid" column ="pid" type ="int" />
+        <property name="beginDate" column="beginDate" type="date" />
+        <property name="endDate" column ="endDate" type ="date" />
+
+      </class>
+        
+  
+
+</hibernate-mapping>
